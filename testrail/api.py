@@ -452,7 +452,7 @@ class API(object):
     def run_with_id(self, run_id):
         try:
             end_point = 'get_run/%i' % run_id
-            return self._get(end_point)[0]
+            return self._get(end_point)
         except IndexError:
             raise TestRailError("Run ID '%s' was not found" % run_id)
 
